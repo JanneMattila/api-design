@@ -1,0 +1,34 @@
+@endpoint = http://localhost:3000
+
+###########
+# No auth #
+###########
+GET {{endpoint}}/products
+
+#########################
+# Subscription key auth #
+#########################
+GET {{endpoint}}/products
+Ocp-Apim-Subscription-Key: abcdedf1234567890
+
+##############
+# Basic auth #
+##############
+#
+# Note: Base64 is used for encoding of the username and password.
+#
+GET {{endpoint}}/products
+Authorization: Basic dXNlcjpIaSFZb3VTbWFydExpdHRsZUZlbGxvdw==
+
+##################
+# oAuth 2.0 auth #
+##################
+#
+# Protect a web API backend in Azure API Management by using OAuth 2.0 authorization with Azure AD
+# https://docs.microsoft.com/en-us/azure/api-management/api-management-howto-protect-backend-with-aad
+# 
+# Secure an Azure API Management API with Azure AD B2C
+# https://docs.microsoft.com/en-us/azure/active-directory-b2c/secure-api-management
+#
+GET {{endpoint}}/products
+Authorization: Bearer eyJ0eXA...2000.characters.removed...ahl8nUmD73TkhyA
