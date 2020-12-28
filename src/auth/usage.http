@@ -32,3 +32,12 @@ Authorization: Basic dXNlcjpIaSFZb3VTbWFydExpdHRsZUZlbGxvdw==
 #
 GET {{endpoint}}/products
 Authorization: Bearer eyJ0eXA...2000.characters.removed...ahl8nUmD73TkhyA
+
+###########################
+# Client certificate auth #
+###########################
+#
+# Follow Rest Client instructions how to setup client certificates
+# https://marketplace.visualstudio.com/items?itemName=humao.rest-client
+#
+GET {{endpoint}}/products
