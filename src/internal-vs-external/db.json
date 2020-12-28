@@ -1,0 +1,15 @@
+{
+  "internal-products": [
+    {
+      "id": 1,
+      "name": "Bike",
+      "price": 99
+    }
+  ],
+  "external-products": [
+    {
+      "id": 1,
+      "name": "Bike"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+@endpoint = http://localhost:3000
+
+### Internal
+GET {{endpoint}}/internal/products
+
+### External
+GET {{endpoint}}/external/products

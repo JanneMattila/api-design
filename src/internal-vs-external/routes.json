@@ -1,0 +1,4 @@
+{
+  "/internal/*": "/internal-$1",
+  "/external/*": "/external-$1"
+}
