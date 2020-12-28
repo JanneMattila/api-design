@@ -1,0 +1,54 @@
+@endpoint = http://localhost:3000
+
+#
+# Web API design
+# https://docs.microsoft.com/en-us/azure/architecture/best-practices/api-design
+#
+# Web API implementation
+# https://docs.microsoft.com/en-us/azure/architecture/best-practices/api-implementation
+#
+
+########
+# GET #
+########
+GET {{endpoint}}/products
+
+########
+# POST #
+########
+POST {{endpoint}}/products
+Content-Type: application/json; charset=utf-8
+
+{
+  "id": 2,
+  "name": "Car"
+}
+
+########
+# PUT #
+########
+PUT {{endpoint}}/products/2
+Content-Type: application/json; charset=utf-8
+
+{
+  "id": 2,
+  "name": "Car 2"
+}
+
+#########
+# PATCH #
+#########
+PATCH {{endpoint}}/products/2
+Content-Type: application/json; charset=utf-8
+
+{
+  "id": 2,
+  "name": "Car 2",
+  "qty": 3
+}
+
+
+##########
+# DELETE #
+##########
+DELETE {{endpoint}}/products/2
