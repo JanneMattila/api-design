@@ -1,10 +1,10 @@
-# API Planning
+# API Design
 
-Some thoughts how to plan your APIs
+Some thoughts how to plan and design your APIs
 
 ## Rapid prototyping
 
-If you want to playaround with your APIs, you
+If you want to playaround with your API design, you
 can use tools like [JSON Server](https://github.com/typicode/json-server)
 to quickly try them out.
 
