@@ -1,0 +1,6 @@
+{
+  "/products\\?api-version=:version": "/:version-rev1-products",
+  "/products;rev=:revision\\?api-version=:version": "/:version-rev:revision-products",
+  "/v1/*": "/v1-rev1-$1",
+  "/v2/*": "/v2-rev1-$1"
+}

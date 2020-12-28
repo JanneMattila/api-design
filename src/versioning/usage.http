@@ -1,0 +1,42 @@
+@endpoint = http://localhost:3000
+
+##########################
+# Versioning in url path #
+##########################
+### v1
+GET {{endpoint}}/v1/products
+
+### v2
+GET {{endpoint}}/v2/products
+
+#################################
+# Versioning in query parameter #
+#################################
+### v1
+GET {{endpoint}}/products?api-version=v1
+
+### v2
+GET {{endpoint}}/products?api-version=v2
+
+#########################
+# Versioning in headers #
+#########################
+#
+# Note: Below samples return 404.
+#
+### v1
+GET {{endpoint}}/products
+Api-Version: v1
+
+### v2
+GET {{endpoint}}/products
+Api-Version: v2
+
+####################################
+# Both version and revision in use #
+####################################
+### v1
+GET {{endpoint}}/products;rev=2?api-version=v1
+
+### v2
+GET {{endpoint}}/products;rev=2?api-version=v2

@@ -1,0 +1,34 @@
+{
+  "v1-rev1-products": [
+    {
+      "id": 1,
+      "name": "Bike"
+    }
+  ],
+  "v2-rev1-products": [
+    {
+      "id": 1,
+      "shortName": "Bike",
+      "longName": "Super Bike Magic"
+    }
+  ],
+  "v1-rev2-products": [
+    {
+      "id": 1,
+      "name": "Bike",
+      "priceEur": 99,
+      "priceUsd": 120.93
+    }
+  ],
+  "v2-rev2-products": [
+    {
+      "id": 1,
+      "shortName": "Bike",
+      "longName": "Super Bike Magic",
+      "prices": {
+        "eur": 99,
+        "usd": 120.93
+      }
+    }
+  ]
+}
