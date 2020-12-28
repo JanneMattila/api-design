@@ -1,0 +1,16 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Bike"
+    }
+  ],
+  "productsxml": [
+    "<Products>",
+    "  <Product>",
+    "    <ID>1</ID>",
+    "    <Name>Bike</Name>",
+    "  </Product>",
+    "</Products>"
+  ]
+}

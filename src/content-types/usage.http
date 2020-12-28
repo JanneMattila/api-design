@@ -1,0 +1,17 @@
+@endpoint = http://localhost:3000
+
+########
+# JSON #
+########
+GET {{endpoint}}/products
+Content-Type: application/json; charset=utf-8
+
+#######
+# Xml #
+#######
+#
+# Note: Just for discussion purposes since
+# it does not return real xml.
+#
+GET {{endpoint}}/productsxml
+Content-Type: application/xml
