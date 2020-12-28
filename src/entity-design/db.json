@@ -1,0 +1,20 @@
+{
+  "products1": [
+    {
+      "id": 1,
+      "name": "Bike",
+      "priceEur": 99,
+      "priceUsd": 120.93
+    }
+  ],
+  "products2": [
+    {
+      "id": 1,
+      "name": "Bike",
+      "prices": {
+        "eur": 99,
+        "usd": 120.93
+      }
+    }
+  ]
+}
