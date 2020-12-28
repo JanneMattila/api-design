@@ -1,0 +1,4 @@
+{
+  "/products/:id/parts": "/parts",
+  "/products/:id/parts/:partid": "/parts/:partid"
+}

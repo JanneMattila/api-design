@@ -1,0 +1,20 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Bike",
+      "priceEur": 99,
+      "priceUsd": 120.93
+    }
+  ],
+  "parts": [
+    {
+      "id": 101,
+      "name": "Front tire"
+    },
+    {
+      "id": 102,
+      "name": "Back tire"
+    }
+  ]
+}
