@@ -4,7 +4,7 @@
 # JSON #
 ########
 GET {{endpoint}}/products
-Content-Type: application/json; charset=utf-8
+Accept: application/json; charset=utf-8
 
 #######
 # Xml #
@@ -14,4 +14,4 @@ Content-Type: application/json; charset=utf-8
 # it does not return real xml.
 #
 GET {{endpoint}}/productsxml
-Content-Type: application/xml
+Accept: application/xml
