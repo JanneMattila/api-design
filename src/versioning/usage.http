@@ -25,18 +25,18 @@ GET {{endpoint}}/products?api-version=v2
 # Note: Below samples return 404.
 #
 ### v1
-GET {{endpoint}}/products
+GET {{endpoint}}/products HTTP/1.1
 Api-Version: v1
 
 ### v2
-GET {{endpoint}}/products
+GET {{endpoint}}/products HTTP/1.1
 Api-Version: v2
 
 ####################################
 # Both version and revision in use #
 ####################################
 ### v1
-GET {{endpoint}}/products;rev=2?api-version=v1
+GET {{endpoint}}/products;rev=2?api-version=v1 HTTP/1.1
 
 ### v2
-GET {{endpoint}}/products;rev=2?api-version=v2
+GET {{endpoint}}/products;rev=2?api-version=v2 HTTP/1.1

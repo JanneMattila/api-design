@@ -3,17 +3,17 @@
 ###########
 # No auth #
 ###########
-GET {{endpoint}}/products
+GET {{endpoint}}/products HTTP/1.1
 
 #########################
 # Subscription key auth #
 #########################
 ### In header
-GET {{endpoint}}/products
+GET {{endpoint}}/products HTTP/1.1
 Ocp-Apim-Subscription-Key: abcdedf1234567890
 
 ### In query parameter
-GET {{endpoint}}/products?subscription-key=abcdedf1234567890
+GET {{endpoint}}/products?subscription-key=abcdedf1234567890 HTTP/1.1
 
 ##############
 # Basic auth #
@@ -21,11 +21,11 @@ GET {{endpoint}}/products?subscription-key=abcdedf1234567890
 #
 # Note: Base64 is used for encoding of the username and password.
 #
-GET {{endpoint}}/products
+GET {{endpoint}}/products HTTP/1.1
 Authorization: Basic dXNlcjpIaSFZb3VTbWFydExpdHRsZUZlbGxvdw==
 
 ##################
-# oAuth 2.0 auth #
+# OAuth 2.0 auth #
 ##################
 #
 # Protect a web API backend in Azure API Management by using OAuth 2.0 authorization with Azure AD
@@ -34,7 +34,7 @@ Authorization: Basic dXNlcjpIaSFZb3VTbWFydExpdHRsZUZlbGxvdw==
 # Secure an Azure API Management API with Azure AD B2C
 # https://docs.microsoft.com/en-us/azure/active-directory-b2c/secure-api-management
 #
-GET {{endpoint}}/products
+GET {{endpoint}}/products HTTP/1.1
 Authorization: Bearer eyJ0eXA...2000.characters.removed...ahl8nUmD73TkhyA
 
 ###########################
@@ -44,4 +44,4 @@ Authorization: Bearer eyJ0eXA...2000.characters.removed...ahl8nUmD73TkhyA
 # Follow Rest Client instructions how to setup client certificates
 # https://marketplace.visualstudio.com/items?itemName=humao.rest-client
 #
-GET {{endpoint}}/products
+GET {{endpoint}}/products HTTP/1.1

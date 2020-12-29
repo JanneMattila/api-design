@@ -6,7 +6,7 @@
 #
 # - Prices are part of the top level entity.
 #
-GET {{endpoint}}/products1
+GET {{endpoint}}/products1 HTTP/1.1
 
 #################
 # Sub structure #
@@ -14,4 +14,4 @@ GET {{endpoint}}/products1
 #
 # - Price has child entity and price per currency.
 #
-GET {{endpoint}}/products2
+GET {{endpoint}}/products2 HTTP/1.1

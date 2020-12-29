@@ -3,10 +3,10 @@
 #########
 # Path  #
 #########
-GET {{endpoint}}/products
+GET {{endpoint}}/products HTTP/1.1
 
 ###
-GET {{endpoint}}/products/1/parts
+GET {{endpoint}}/products/1/parts HTTP/1.1
 
 ###
-GET {{endpoint}}/products/1/parts/101
+GET {{endpoint}}/products/1/parts/101 HTTP/1.1

@@ -3,9 +3,9 @@
 ############
 # Internal #
 ############
-GET {{endpoint}}/internal/products
+GET {{endpoint}}/internal/products HTTP/1.1
 
 ############
 # External #
 ############
-GET {{endpoint}}/external/products
+GET {{endpoint}}/external/products HTTP/1.1

@@ -11,12 +11,12 @@
 ########
 # GET #
 ########
-GET {{endpoint}}/products
+GET {{endpoint}}/products HTTP/1.1
 
 ########
 # POST #
 ########
-POST {{endpoint}}/products
+POST {{endpoint}}/products HTTP/1.1
 Content-Type: application/json; charset=utf-8
 
 {
@@ -27,7 +27,7 @@ Content-Type: application/json; charset=utf-8
 ########
 # PUT #
 ########
-PUT {{endpoint}}/products/2
+PUT {{endpoint}}/products/2 HTTP/1.1
 Content-Type: application/json; charset=utf-8
 
 {
@@ -38,7 +38,7 @@ Content-Type: application/json; charset=utf-8
 #########
 # PATCH #
 #########
-PATCH {{endpoint}}/products/2
+PATCH {{endpoint}}/products/2 HTTP/1.1
 Content-Type: application/json; charset=utf-8
 
 {
@@ -47,8 +47,7 @@ Content-Type: application/json; charset=utf-8
   "qty": 3
 }
 
-
 ##########
 # DELETE #
 ##########
-DELETE {{endpoint}}/products/2
+DELETE {{endpoint}}/products/2 HTTP/1.1
