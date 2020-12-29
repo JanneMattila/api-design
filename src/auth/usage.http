@@ -8,8 +8,12 @@ GET {{endpoint}}/products
 #########################
 # Subscription key auth #
 #########################
+### In header
 GET {{endpoint}}/products
 Ocp-Apim-Subscription-Key: abcdedf1234567890
+
+### In query parameter
+GET {{endpoint}}/products?subscription-key=abcdedf1234567890
 
 ##############
 # Basic auth #

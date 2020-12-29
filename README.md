@@ -11,3 +11,7 @@ to quickly try them out.
 ```
 json-server --watch db.json --routes routes.json
 ```
+
+## Links
+
+[Microsoft REST Guidelines](https://github.com/microsoft/api-guidelines)
