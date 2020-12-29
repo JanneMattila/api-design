@@ -1,8 +1,7 @@
 # API Design
 
-Some thoughts how to plan and design your APIs so
-that you can faster start you actual API implementation by
-prototyping them first.
+Some ideas how you can plan and design your APIs faster
+by quickly prototyping them first.
 
 ## Rapid prototyping your APIs
 
