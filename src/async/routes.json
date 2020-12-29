@@ -1,0 +1,4 @@
+{
+  "/products/:id/update-warehouse": "/update-warehouse",
+  "/jobs/:id/output": "/jobs-output/:id"
+}
