@@ -16,6 +16,7 @@ JSON Server is used for creating following prototyping examples under `src` fold
 | [api-operations](src/api-operations)             | Try different API operations such as GET, POST, DELETE and PATCH       |
 | [async](src/async)                               | Play with long running operations API design                           |
 | [auth](src/auth)                                 | See different kind of authentication options for your APIs             |
+| [callback](src/callback)                         | Play with API which requires callback functionality                    |
 | [entity-design](src/entity-design)               | Play with different entity design options                              |
 | [internal-vs-external](src/internal-vs-external) | Compare the entity design when exposing internal and external entities |
 | [media-types](src/media-types)                   | Identify the media types that you plan to use in your APIs             |
@@ -36,3 +37,7 @@ using the Visual Studio Code [Rest Client extension](https://marketplace.visuals
 ## Links
 
 [Microsoft REST Guidelines](https://github.com/microsoft/api-guidelines)
+
+[JSONschema.net](https://jsonschema.net)
+
+[The OpenAPI Specification Repository](https://github.com/OAI/OpenAPI-Specification)
