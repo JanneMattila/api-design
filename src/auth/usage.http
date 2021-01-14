@@ -5,6 +5,16 @@
 ###########
 GET {{endpoint}}/products HTTP/1.1
 
+### Response:
+# HTTP/1.1 200 OK
+#
+# [
+#   {
+#     "id": 1,
+#     "name": "Bike"
+#   }
+# ]
+
 #########################
 # Subscription key auth #
 #########################
@@ -15,6 +25,16 @@ Ocp-Apim-Subscription-Key: abcdedf1234567890
 ### In query parameter
 GET {{endpoint}}/products?subscription-key=abcdedf1234567890 HTTP/1.1
 
+### Response:
+# HTTP/1.1 200 OK
+#
+# [
+#   {
+#     "id": 1,
+#     "name": "Bike"
+#   }
+# ]
+
 ##############
 # Basic auth #
 ##############
@@ -23,6 +43,16 @@ GET {{endpoint}}/products?subscription-key=abcdedf1234567890 HTTP/1.1
 #
 GET {{endpoint}}/products HTTP/1.1
 Authorization: Basic dXNlcjpIaSFZb3VTbWFydExpdHRsZUZlbGxvdw==
+
+### Response:
+# HTTP/1.1 200 OK
+#
+# [
+#   {
+#     "id": 1,
+#     "name": "Bike"
+#   }
+# ]
 
 ##################
 # OAuth 2.0 auth #
@@ -37,6 +67,16 @@ Authorization: Basic dXNlcjpIaSFZb3VTbWFydExpdHRsZUZlbGxvdw==
 GET {{endpoint}}/products HTTP/1.1
 Authorization: Bearer eyJ0eXA...2000.characters.removed...ahl8nUmD73TkhyA
 
+### Response:
+# HTTP/1.1 200 OK
+#
+# [
+#   {
+#     "id": 1,
+#     "name": "Bike"
+#   }
+# ]
+
 ###########################
 # Client certificate auth #
 ###########################
@@ -45,3 +85,13 @@ Authorization: Bearer eyJ0eXA...2000.characters.removed...ahl8nUmD73TkhyA
 # https://marketplace.visualstudio.com/items?itemName=humao.rest-client
 #
 GET {{endpoint}}/products HTTP/1.1
+
+### Response:
+# HTTP/1.1 200 OK
+#
+# [
+#   {
+#     "id": 1,
+#     "name": "Bike"
+#   }
+# ]

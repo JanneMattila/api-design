@@ -13,6 +13,16 @@
 ########
 GET {{endpoint}}/products HTTP/1.1
 
+### Response:
+# HTTP/1.1 200 OK
+#
+# [
+#   {
+#     "id": 1,
+#     "name": "Bike"
+#   }
+# ]
+
 ########
 # POST #
 ########
@@ -24,6 +34,14 @@ Content-Type: application/json; charset=utf-8
   "name": "Car"
 }
 
+### Response:
+# HTTP/1.1 201 Created
+#
+# {
+#   "id": 2,
+#   "name": "Car"
+# }
+
 ########
 # PUT #
 ########
@@ -34,6 +52,14 @@ Content-Type: application/json; charset=utf-8
   "id": 2,
   "name": "Car 2"
 }
+
+### Response:
+# HTTP/1.1 200 OK
+#
+# {
+#   "id": 2,
+#   "name": "Car 2"
+# }
 
 #########
 # PATCH #
@@ -47,7 +73,21 @@ Content-Type: application/json; charset=utf-8
   "qty": 3
 }
 
+### Response:
+# HTTP/1.1 200 OK
+#
+# {
+#   "id": 2,
+#   "name": "Car 2"
+#   "qty": 3
+# }
+
 ##########
 # DELETE #
 ##########
 DELETE {{endpoint}}/products/2 HTTP/1.1
+
+### Response:
+# HTTP/1.1 200 OK
+#
+# {}
