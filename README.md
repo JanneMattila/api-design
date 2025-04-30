@@ -34,6 +34,89 @@ json-server --watch db.json --routes routes.json
 Then you can execute the different API calls using `usage.http`
 using the Visual Studio Code [Rest Client extension](https://marketplace.visualstudio.com/items?itemName=humao.rest-client).
 
+## Use TypeSpec
+
+[TypeSpec](https://typespec.io/)
+
+[OpenAPI Generator](https://github.com/OpenAPITools/openapi-generator)
+
+```typescript
+import "@typespec/http";
+
+using Http;
+@service(#{ title: "Widget Service" })
+namespace DemoService;
+
+model Widget {
+  id: string;
+  weight: int32;
+  color: "red" | "blue";
+}
+
+model WidgetList {
+  items: Widget[];
+}
+
+@error
+model Error {
+  code: int32;
+  message: string;
+}
+
+model AnalyzeResult {
+  id: string;
+  analysis: string;
+}
+
+@route("/widgets")
+@tag("Widgets")
+interface Widgets {
+  /** List widgets */
+  @get list(): WidgetList | Error;
+  /** Read widgets */
+  @get read(@path id: string): Widget | Error;
+  /** Create a widget */
+  @post create(@body body: Widget): Widget | Error;
+  /** Update a widget */
+  @patch update(@path id: string, @body body: Widget): Widget | Error;
+  /** Delete a widget */
+  @delete delete(@path id: string): void | Error;
+
+  /** Analyze a widget */
+  @route("{id}/analyze") @post analyze(@path id: string): AnalyzeResult | Error;
+}
+```
+
+```powershell
+npm install @openapitools/openapi-generator-cli -g
+npm install -g @typespec/compiler
+
+tsp init
+tsp compile .
+
+openapi-generator-cli generate -i tsp-output/schema/openapi.yaml -g aspnetcore -o tsp-output/src
+```
+
+Snippet from the generate server code:
+
+```csharp
+namespace Org.OpenAPITools.Controllers
+{ 
+  [ApiController]
+  public class WidgetsApiController : ControllerBase
+  { 
+    [HttpPost]
+    [Route("/widgets/{id}/analyze")]
+    [ValidateModelState]
+    [SwaggerOperation("WidgetsAnalyze")]
+    [SwaggerResponse(statusCode: 200, type: typeof(AnalyzeResult), description: "The request has succeeded.")]
+    [SwaggerResponse(statusCode: 0, type: typeof(Error), description: "An unexpected error response.")]
+    public virtual IActionResult WidgetsAnalyze([FromRoute (Name = "id")][Required]string id)
+    { /* ... */ }
+  }
+}
+```
+
 ## Links
 
 [Microsoft REST Guidelines](https://github.com/microsoft/api-guidelines)
